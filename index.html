@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicola Hofmänner</title>
+        <link rel="icon" href="assets/img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" crossorigin href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script defer src="assets/js/main.js"></script>
+    </head>
+
+    <body>
+        <div class="page" id="top">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="container header-inner">
+            <div class="brand-wrapper">
+                <a class="brand brand-link" href="#top">
+                <span class="material-symbols-outlined brand-icon" aria-hidden="true">graphic_eq</span>
+                <span class="brand-name">Nicola Hofmänner</span>
+                </a>
+
+                <button
+                class="nav-toggle"
+                type="button"
+                aria-label="Navigation öffnen"
+                aria-expanded="false"
+                aria-controls="siteNav"
+                >
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+            </div>
+
+            <nav class="nav" id="siteNav">
+                <a class="nav-link" href="#work-audio">Audio</a>
+                <a class="nav-link" href="#work-web">Web</a>
+                <a class="nav-link" href="#about">Kontakt</a>
+            </nav>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                <p class="hero-eyebrow">Nicola Hofmänner · Multimedia Producer</p>
+                <h2 class="hero-title">klingt gut. macht spass.</h2>
+                <p class="hero-description">
+                    Multimedia Produzent mit Fokus auf Audio- und Webprojekte.
+                </p>
+                <div class="hero-cta">
+                    <a class="btn btn-dark" href="#work-audio">reinhören</a>
+                    <a class="btn btn-outline" href="#work-web">durchklicken</a>
+                </div>
+                </div>
+
+                <div class="hero-showcase">
+                <div class="hero-slider" data-hero-slider>
+                    <div class="hero-slider-track">
+                    <figure class="hero-slide is-active">
+                        <img src="assets/img/nicola_kiel.jpg" alt="Nicola" />
+                    </figure>
+                    <figure class="hero-slide">
+                        <img src="assets/img/nicola_schattenwege.png" alt="Detail der Modular-Synth-Patches" />
+                    </figure>
+                    <figure class="hero-slide">
+                        <picture>
+                        <source srcset="assets/img/standorti_crew_square.jpeg" media="(max-width: 768px)" />
+                        <img src="assets/img/standorti_crew_cropped.jpeg" alt="UX Mockups für eine Web Experience" />
+                        </picture>
+                    </figure>
+                    </div>
+
+                    <div class="hero-slider-controls" aria-label="Hero Bilder Navigation">
+                    <button class="hero-slider-btn" type="button" data-hero-prev aria-label="Vorheriges Bild">
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+                    </button>
+                    <button class="hero-slider-btn" type="button" data-hero-next aria-label="Nächstes Bild">
+                        <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+                    </button>
+                    </div>
+
+                    <div class="hero-slider-indicators" aria-label="Hero Bilder"></div>
+                </div>
+                </div>
+            </div>
+            </section>
+
+
+            <!-- Audio Works -->
+            <section class="section section-muted" id="work-audio">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">Audio Projekte</h2>
+                    <span class="section-kicker">Ausgewählte Arbeiten</span>
+                </div>
+
+                <div class="grid">
+                <!-- Audio Card 1 -->
+                <article class="project js-modal-open"
+                    data-title="Standort I"
+                    data-subtitle="Mockumentary"
+                    data-description="Settonaufnahme, Livemischung, Tonrestauration"
+                    data-role=" Meine Rollen: Settonaufnahme, Livemischung, Tonrestauration"
+                    data-links='[{"label":"Project page","url":"#"}]'
+                >
+                    <div class="project-media">
+                    <img
+                        class="project-img ph"
+                        src="assets/img/coming_2026.png"
+                        alt="Standort I Cover"
+                    />
+                    </div>
+
+                    <div class="project-body">
+                    <div class="project-head">
+                        <h3 class="project-title">Standort I</h3>
+                        <button
+                        class="project-info-toggle"
+                        type="button"
+                        aria-label="Mehr Informationen zu Standort I"
+                        aria-expanded="false"
+                        aria-controls="project-info-1"
+                        >
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">info</span>
+                        </button>
+                    </div>
+
+                    <p class="project-text">Mockumentary</p>
+
+                    <div class="tags">
+                        <span class="tag">Set-Ton</span>
+                        <span class="tag">Restauration</span>
+                    </div>
+                    </div>
+
+                    <div
+                    class="project-info-panel"
+                    id="project-info-1"
+                    role="dialog"
+                    aria-modal="false"
+                    aria-labelledby="project-info-1-title"
+                    hidden
+                    >
+                    <div class="project-info-panel-head">
+                        <p class="project-info-panel-title" id="project-info-1-title">Über das Projekt</p>
+                        <button class="project-info-close" type="button" aria-label="Close project info">
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                        </button>
+                    </div>
+                    <dl class="project-info-details">
+                        <div>
+                        <dt>Was</dt>
+                        <dd>Mockumentary zu unserem Studium</dd>
+                        </div>
+                        <div>
+                        <dt>Wer</dt>
+                        <dd>Skript & Regie von Stephanie Römer und Lisa Strebel, Kamera von Cédric Züllig & Luca Mosberger</dd>
+                        </div>
+                        <div>
+                        <dt>Meine Rollen</dt>
+                        <dd>Mikrofonierung der Schauspieler:innen, Boom-Mic-Operator, Audiorestauration</dd>
+                        </div>
+                    </dl>
+                    <div class="project-info-links">
+                        <a class="project-info-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+                        <span>Project page</span>
+                        </a>
+                    </div>
+                    </div>
+                </article>
+
+                <!-- Audio Card 2 -->
+                <article class="project js-modal-open"
+                    data-title="Fanfeindschaft"
+                    data-subtitle="Fussballpodcast"
+                    data-description="Podcast rund um den BSC YB und den FC Basel"
+                    data-role="Rollen: Recherche, Aufnahme, Postproduktion, Distribution"
+                    data-links='[{"label":"Listen","url":"#"}]'
+                >
+                    <div class="project-media">
+                    <img
+                        class="project-img"
+                        src="assets/img/fanfeindschaft.png"
+                        alt="Fanfeindschaft - Der Fussballpodcast"
+                    />
+                    </div>
+
+                    <div class="project-body">
+                    <div class="project-head">
+                        <h3 class="project-title">Fanfeindschaft</h3>
+                        <button
+                        class="project-info-toggle"
+                        type="button"
+                        aria-label="Mehr Informationen zu Fanfeindschaft."
+                        aria-expanded="false"
+                        aria-controls="project-info-2"
+                        >
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">info</span>
+                        </button>
+                    </div>
+
+                    <p class="project-text">Fussballpodcast</p>
+
+                    <div class="tags">
+                        <span class="tag">Moderation</span>
+                        <span class="tag">Postproduktion</span>
+                        <span class="tag">Distribution</span>
+                    </div>
+                    </div>
+
+                    <div
+                    class="project-info-panel"
+                    id="project-info-2"
+                    role="dialog"
+                    aria-modal="false"
+                    aria-labelledby="project-info-2-title"
+                    hidden
+                    >
+                    <div class="project-info-panel-head">
+                        <p class="project-info-panel-title" id="project-info-2-title">Über das Projekt</p>
+                        <button class="project-info-close" type="button" aria-label="Close project info">
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                        </button>
+                    </div>
+                    <dl class="project-info-details">
+                        <div>
+                        <dt>Was</dt>
+                        <dd>Ich (Ein YB Fan) bespreche mit meiner Ko-Moderatorin Yara (eine FCB Anhängerin) das aktuelle Geschehen im Schweizer Fussball.</dd>
+                        </div>
+                        <div>
+                        <dt>Wer</dt>
+                        <dd>In Zusammenarbeit mit Yara Burkhalter</dd>
+                        </div>
+                        <div>
+                        <dt>Meine Aufgaben</dt>
+                        <dd>Recherche, Aufnahme, Moderation, Schnitt, Mix & Master, Distribution</dd>
+                        </div>
+                    </dl>
+                    <div class="project-info-links">
+                        <a class="project-info-link" href="https://open.spotify.com/show/0YlmspFqHQtE7hMMn8jUIA" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+                        <span>Zum Projekt</span>
+                        </a>
+                    </div>
+                    </div>
+                </article>
+
+                <!-- Audio Card 3 -->
+                <article class="project js-modal-open"
+                    data-title="Schattenwege"
+                    data-subtitle="Hörpsiel"
+                    data-description="Original composition and full production."
+                    data-role="Roles: Composition, sound design, mix"
+                    data-links='[{"label":"Listen","url":"#"}]'
+                >
+                    <div class="project-media">
+                    <img
+                        class="project-img ph"
+                        src="assets/img/schattenwege.png"
+                        alt="Audio project cover"
+                    />
+                    </div>
+
+                    <div class="project-body">
+                    <div class="project-head">
+                        <h3 class="project-title">Schattenwege</h3>
+                        <button
+                        class="project-info-toggle"
+                        type="button"
+                        aria-label="Mehr Informationen zu Schattenwege"
+                        aria-expanded="false"
+                        aria-controls="project-info-3"
+                        >
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">info</span>
+                        </button>
+                    </div>
+
+                    <p class="project-text"> Interaktives Hörspiel</p>
+
+                    <div class="tags">
+                        <span class="tag">Aufnahme</span>
+                        <span class="tag">Sound Design</span>
+                        <span class="tag">Mix & Master</span>
+                    </div>
+                    </div>
+
+                    <div
+                    class="project-info-panel"
+                    id="project-info-3"
+                    role="dialog"
+                    aria-modal="false"
+                    aria-labelledby="project-info-3-title"
+                    hidden
+                    >
+                    <div class="project-info-panel-head">
+                        <p class="project-info-panel-title" id="project-info-3-title">Über das Projekt</p>
+                        <button class="project-info-close" type="button" aria-label="Close project info">
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                        </button>
+                    </div>
+                    <dl class="project-info-details">
+                        <div>
+                        <dt>Was</dt>
+                        <dd>Interaktive Detektivgeschichte</dd>
+                        </div>
+                        <div>
+                        <dt>Wer</dt>
+                        <dd>In Zusammenarbeit mit Vanessa Andermatt</dd>
+                        </div>
+                        <div>
+                        <dt>Meine Aufgaben</dt>
+                        <dd>Scriptwriting, Sprechrolle, Aufnahme der Schauspieler:innen, Schnitt, Sound Design, Mix & Master, Programmieren der Webseite</dd>
+                        </div>
+                    </dl>
+                    <div class="project-info-links">
+                        <a class="project-info-link" href="https://www.schattenwege.clxmedia.ch" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+                        <span>Zum Projekt</span>
+                        </a>
+                    </div>
+                    </div>
+                </article>
+                </div>
+            </div>
+            </section>
+
+            <!-- Web Projects -->
+            <section class="section" id="work-web">
+            <div class="container">
+                <div class="section-head">
+                <h2 class="section-title">Web Projekte</h2>
+                <span class="section-kicker">Ausgewählte Arbeiten</span>
+                </div>
+
+                <div class="grid">
+                <article class="project">
+                    <div class="project-media">
+                    <img class="project-img ph" src="assets/img/coming_2026.png" alt="New Project Coming 2026" />
+                    </div>
+                    <div class="project-body">
+                    <div class="project-head">
+                        <h3 class="project-title">Football Quizzes</h3>
+                        <button
+                        class="project-info-toggle"
+                        type="button"
+                        aria-label="Mehr Informationen zu den Football Quizzes Coming 2026"
+                        aria-expanded="false"
+                        aria-controls="project-info-4"
+                        >
+                        <span class="material-symbols-outlined project-icon" aria-hidden="true">info</span>
+                        </button>
+                    </div>
+                    <p class="project-text">Quizplattform zum Schweizer Fussball</p>
+                    <div class="tags">
+                        <span class="tag">Fullstack</span>
+                        <span class="tag">Realtime Database</span>
+                    </div>
+                    </div>
+
+                    <div
+                    class="project-info-panel"
+                    id="project-info-4"
+                    role="dialog"
+                    aria-modal="false"
+                    aria-labelledby="project-info-4-title"
+                    hidden
+                    >
+                    <div class="project-info-panel-head">
+                        <p class="project-info-panel-title" id="project-info-4-title">Über das Projekt</p>
+                        <button class="project-info-close" type="button" aria-label="Close project info">
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                        </button>
+                    </div>
+                    <dl class="project-info-details">
+                        <div>
+                        <dt>Was</dt>
+                        <dd>Plattform mit verschiedenen Quizzes rund um den Schweizer Fussball</dd>
+                        </div>
+                        <div>
+                        <dt>Wer</dt>
+                        <dd>Einzelarbeit</dd>
+                        </div>
+                        <div>
+                        <dt>Meine Rollen</dt>
+                        <dd>Konzept, Design, Entwicklung, Data Handling</dd>
+                        </div>
+                    </dl>
+                    <div class="project-info-links">
+                        <a class="project-info-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+                        <span>Zum Projekt</span>
+                        </a>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-media">
+                        <img class="project-img" src="assets/img/fangis.png" alt="Web-Projekt fangis" />
+                    </div>
+                    <div class="project-body">
+                        <div class="project-head">
+                            <h3 class="project-title">fangis</h3>
+                            <button
+                            class="project-info-toggle"
+                            type="button"
+                            aria-label="Mehr Informationen zu fangis"
+                            aria-expanded="false"
+                            aria-controls="project-info-5"
+                            >
+                            <span class="material-symbols-outlined project-icon" aria-hidden="true">info</span>
+                            </button>
+                        </div>
+                    <p class="project-text">Urbanes Spiel</p>
+                    <div class="tags">
+                        <span class="tag">Development</span>
+                    </div>
+                    </div>
+
+                    <div
+                    class="project-info-panel"
+                    id="project-info-5"
+                    role="dialog"
+                    aria-modal="false"
+                    aria-labelledby="project-info-5-title"
+                    hidden
+                    >
+                    <div class="project-info-panel-head">
+                        <p class="project-info-panel-title" id="project-info-5-title">Über das Projekt</p>
+                        <button class="project-info-close" type="button" aria-label="Close project info">
+                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                        </button>
+                    </div>
+                    <dl class="project-info-details">
+                        <div>
+                        <dt>Was</dt>
+                        <dd>Fangen quer durch die ganze Stadt. Verbindet die reale Welt mit digitalen Elementen.</dd>
+                        </div>
+                        <div>
+                        <dt>Wer</dt>
+                        <dd>In Zusammenarbeit mit Selma Sahin und Stephanie Römer</dd>
+                        </div>
+                        <div>
+                        <dt>Meine Aufgaben</dt>
+                        <dd>Spielkonzeption, Entwicklung</dd>
+                        </div>
+                    </dl>
+                    <div class="project-info-links">
+                        <a class="project-info-link" href="https://www.fangis.app/landing_page" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span>
+                        <span>Zum Projekt</span>
+                        </a>
+                    </div>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+            </section>
+
+            <!-- About -->
+            <section class="section section-accent" id="about">
+            <div class="container container-wide">
+                <div class="about">
+                <div class="about-left">
+                    <h2 class="about-title">Über mich</h2>
+                    <div class="about-rule"></div>
+
+                    <div class="about-photo-wrap">
+                    <img
+                        class="about-photo ph"
+                        src="assets/img/nicola.jpg"
+                        alt="About portrait"
+                    />
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <p class="about-text">
+                    Hallo, ich bin Nicola – ein Multimedia Produzent based in Chur & Bern.
+                    </p>
+                    <div class="skills">
+                    <div>
+                        <p class="skills-title">Software</p>
+                        <ul class="skills-list">
+                        <li>Pro Tools, Logic Pro, Izotope RX</li>
+                        <li>HTML, CSS, PHP, JS</li>
+                        <li>Vue.js, Nuxt</li>
+                        <li>Premiere Pro, Figma</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="skills-title">Persönlich</p>
+                        <ul class="skills-list">
+                        <li>Teamfähig</li>
+                        <li>Organisiert</li>
+                        <li>Lösungsorientiert</li>
+                        <li>Neugierig</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="cv">
+                    <p class="cv-title">Lebenslauf (Auszug)</p>
+                    <div class="cv-entry">
+                        <p class="cv-period">2022-2023</p>
+                        <div>
+                        <p class="cv-role">Praktikant Post Production & Sound Design</p>
+                        <p class="cv-place">Blue Box Tonstudios, Burgdorf</p>
+                        </div>
+                    </div>
+                    <div class="cv-entry">
+                        <p class="cv-period">2023–2026</p>
+                        <div>
+                        <p class="cv-role">Studium Multimedia Production</p>
+                        <p class="cv-place">Fachhochschule Graubünden, Chur</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="about-contact">
+                        <p class="about-contact-text">
+                        Für Anfragen kannst du mich jederzeit kontaktieren:
+                        </p>
+                        <div class="about-cta">
+                        <button class="btn btn-dark about-email-btn" type="button" data-email="nicola.hofmaenner@gmail.com">
+                            E-Mail-Adresse kopieren
+                        </button>
+                        <a class="about-linkedin" href="https://www.linkedin.com/in/nicola-hofm%C3%A4nner-0b5728267/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profil">
+                            <img src="assets/img/linkedin_black.png" alt="" />
+                            <img src="assets/img/linkedin_yellow.png" alt="" />
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+            <div class="footer-links">
+                <a class="footer-link" href="impressum.html">Impressum</a>
+            </div>
+
+            <p class="footer-copy">© 2026 Nicola Hofmänner</p>
+            </div>
+        </footer>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal-backdrop" id="modalBackdrop" hidden>
+        <div class="modal">
+            <button class="modal-close" id="modalClose">
+            <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <h3 class="modal-title" id="modalTitle"></h3>
+            <p class="modal-subtitle" id="modalSubtitle"></p>
+            <p class="modal-role" id="modalRole"></p>
+            <p class="modal-description" id="modalDescription"></p>
+            <div class="modal-links" id="modalLinks"></div>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+:root {
+  --primary: #ecc113;
+  --bg: #f8f8f6;
+  --text: #181611;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.impressum {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  line-height: 1.6;
+}
+
+header h1 { margin: 0 0 4px; font-weight: 700; font-family: "Newsreader", serif; font-size: 36px; }
+header p { margin: 0 0 28px; color: rgba(24, 22, 17, 0.65); }
+
+section { margin-bottom: 28px; }
+section h2 { margin: 0 0 8px; font-size: 18px; font-weight: 700; }
+section p { margin: 4px 0; }
+
+a { color: var(--text); }
