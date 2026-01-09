@@ -451,6 +451,13 @@ a { color: inherit; text-decoration: none; }
   border-color: var(--primary);
   color: var(--text);
 }
+.project-info-link--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  border-style: dashed;
+  background: transparent;
+}
+.project-info-link--disabled:hover { border-color: var(--border); color: inherit; background: transparent; }
 .project-info-link .material-symbols-outlined { font-size: 18px; }
 
 /* About */
@@ -668,6 +675,9 @@ a { color: inherit; text-decoration: none; }
   place-items: center;
   z-index: 200;
 }
+.modal-backdrop:not([hidden]) {
+  display: grid;
+}
 .modal {
   width: 760px;
   background: #fff;
@@ -724,3 +734,8 @@ a { color: inherit; text-decoration: none; }
 }
 .modal-link:hover { border-color: rgba(24, 22, 17, 0.25); }
 .modal-link .material-symbols-outlined { font-size: 18px; color: rgba(24, 22, 17, 0.7); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-slide { transition: none; }
+}

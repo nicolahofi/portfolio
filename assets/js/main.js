@@ -1,16 +1,5 @@
 // main.js
 (() => {
-  const initFormDemo = () => {
-    const form = document.querySelector("form");
-    if (!form) return;
-
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("Message sent (demo).");
-      form.reset();
-    });
-  };
-
   const initProjectModal = () => {
     const backdrop = document.getElementById("modalBackdrop");
     const closeBtn = document.getElementById("modalClose");
@@ -24,6 +13,10 @@
 
     backdrop.hidden = true;
     const openers = Array.from(document.querySelectorAll(".js-modal-open"));
+    const focusableSelector =
+      'a[href]:not([tabindex="-1"]), button:not([disabled]):not([tabindex="-1"]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    let previouslyFocused = null;
+    let focusableElements = [];
 
     const openModal = (card) => {
       const title = card.getAttribute("data-title") || "Untitled";
@@ -47,21 +40,39 @@
       }
 
       links.forEach((l) => {
+        const label = typeof l.label === "string" ? l.label.trim() : "";
+        const url = typeof l.url === "string" ? l.url.trim() : "";
+        if (!url || url === "#") return;
         const a = document.createElement("a");
         a.className = "modal-link";
-        a.href = l.url || "#";
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.innerHTML = `<span class="material-symbols-outlined" aria-hidden="true">arrow_outward</span><span>${l.label || "Link"}</span>`;
+        a.href = url;
+        if (/^https?:\/\//i.test(url)) {
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+        }
+        const icon = document.createElement("span");
+        icon.className = "material-symbols-outlined";
+        icon.setAttribute("aria-hidden", "true");
+        icon.textContent = "arrow_outward";
+        const text = document.createElement("span");
+        text.textContent = label || "Link";
+        a.append(icon, text);
         linksEl.appendChild(a);
       });
 
+      previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
       backdrop.hidden = false;
-      closeBtn.focus();
+      focusableElements = Array.from(backdrop.querySelectorAll(focusableSelector));
+      (focusableElements[0] || closeBtn).focus();
     };
 
     const closeModal = () => {
       backdrop.hidden = true;
+      focusableElements = [];
+      if (previouslyFocused) {
+        previouslyFocused.focus();
+        previouslyFocused = null;
+      }
     };
 
     openers.forEach((card) => {
@@ -80,8 +91,25 @@
       if (e.target === backdrop) closeModal();
     });
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !backdrop.hidden) closeModal();
+    document.addEventListener("keydown", (event) => {
+      if (backdrop.hidden) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeModal();
+        return;
+      }
+      if (event.key !== "Tab" || !focusableElements.length) return;
+      const first = focusableElements[0];
+      const last = focusableElements[focusableElements.length - 1];
+      if (event.shiftKey) {
+        if (document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        }
+      } else if (document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     });
   };
 
@@ -161,6 +189,9 @@
     const nextBtn = slider.querySelector("[data-hero-next]");
     let activeIndex = 0;
     let autoTimer;
+    const prefersReducedMotion = window.matchMedia
+      ? window.matchMedia("(prefers-reduced-motion: reduce)")
+      : { matches: false };
 
     let indicators = [];
 
@@ -197,9 +228,12 @@
     };
 
     indicators = renderIndicators();
+    const shouldAutoPlay = () => !prefersReducedMotion.matches;
     const resetTimer = () => {
       if (autoTimer) clearInterval(autoTimer);
-      autoTimer = window.setInterval(next, 6000);
+      if (shouldAutoPlay()) {
+        autoTimer = window.setInterval(next, 6000);
+      }
     };
 
     prevBtn?.addEventListener("click", prev);
@@ -207,6 +241,13 @@
 
     updateState();
     resetTimer();
+
+    const handleMotionChange = () => resetTimer();
+    if (typeof prefersReducedMotion.addEventListener === "function") {
+      prefersReducedMotion.addEventListener("change", handleMotionChange);
+    } else if (typeof prefersReducedMotion.addListener === "function") {
+      prefersReducedMotion.addListener(handleMotionChange);
+    }
   };
 
   const initEmailCopy = () => {
@@ -261,7 +302,6 @@
     });
   };
 
-  initFormDemo();
   initProjectModal();
   initProjectInfoPanels();
   initHeroSlider();
